@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ビンゴカード</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <center>
+    <h1>ビンゴカード</h1>
+    <table border="1" width="400" height="400">
+        <tr>
+            <th>B</th>
+            <th>I</th>
+            <th>N</th>
+            <th>G</th>
+            <th>O</th>
+        </tr>
+        {% for i in range(5) %}
+        <tr>
+            <td>{{ B[i] }}</td>
+            <td>{{ I[i] }}</td>
+            <td>{{ 'F' if i == 2 else N[i] }}</td>
+            <td>{{ G[i] }}</td>
+            <td>{{ O[i] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </center>
+</body>
+</html>
